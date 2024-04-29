@@ -105,6 +105,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     HAL_UART_Receive_IT(&huart1, (uint8_t *)&aRxBuffer, 1);   //因为接收中断使用了一次即关闭，所以在最后加入这行代码即可实现无限使用
 }
 /* USER CODE END 0 */
+void joint1(int angle)//用这个函数来控制舵机1，输入一个角度，产生对应波形来控制舵机1
+{
+    UNUSED(angle);
+}
+void joint2(int angle)//用这个函数来控制舵机2，输入一个角度，产生对应波形来控制舵机2
+{
+    UNUSED(angle);
+}
 
 /**
   * @brief  The application entry point.
